@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block content %} 
+<h3>Customer Name: {{ cust}}</h3> 
+<h3>Orders</h3>
+    &nbsp; 
+<table class="table"> 
+{% for i in orders %} 
+    <tr> 
+        <td>{{i.product}}</td> 
+    </tr> 
+{% endfor %} 
+</table> 
+<a href="{% url 'home' %}"><button type="button" class="btn btn-success">Home Window</button></a> 
+{% endblock %} 

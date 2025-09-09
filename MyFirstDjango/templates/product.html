@@ -1,5 +1,5 @@
-{% block content %} 
 
+{% block content %} 
 <style>
     h1 {
         color: #2c3e50;
@@ -37,21 +37,19 @@
         background-color: #fefbf693;  /* Light blue color, you can change it */
     }
 </style>
-<h1>Dashboard</h1> 
-
+<h1>Products</h1> 
 <a href="{% url 'home' %}"><button type="button" class="btn btn-success">Home Window</button></a> 
     &nbsp; 
 <table class="table"> 
     <tr> 
         <th>Name</th> 
-        <th>Age</th> 
+        <th>Price</th> 
     </tr> 
-    {% for c in customers %} 
+    {% for c in product %} 
     <tr> 
         <td>{{c.name}}</td> 
-        <td>{{c.age}}</td> 
-        <td><a href="{% url 'customer' c.id %}">View</a></td>
+        <td>{{c.price}}</td> 
     </tr> 
     {% endfor %} 
 </table> 
-{% endblock %} 
+{% endblock %}
